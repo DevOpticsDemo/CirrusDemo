@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        qwriteFile file: "application.sh", text: "echo Built ${BUILD_ID} of ${JOB_NAME}"
+        qqwriteFile file: "application.sh", text: "echo Built ${BUILD_ID} of ${JOB_NAME}"
         archiveArtifacts artifacts: '*.sh', fingerprint: true
       }
     }
